@@ -67,9 +67,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/ckbRemember"
-            style="@style/Widget.CompoundButton.Checkbox"
-            app:buttonTint="@android:color/white" />
-        <!-- app:buttonTint="@color/colorPrimaryDark" -->
+            style="@style/Widget.CompoundButton.Checkbox" />
+        <!-- app:buttonTint="@android:color/white" -->
         <!-- android:theme="@style/Widget.Checkbox" -->
 
         <TextView
