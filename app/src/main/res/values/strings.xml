@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">LoginLinearLayout</string>
+    <string name="txvSignIn">Acceder</string>
+    <string name="txvUser">Usuario:</string>
+    <string name="txvPassword">Contraseña:</string>
+    <string name="ckbRemember">Recordar</string>
+    <string name="txvSignUp">Registrarse</string>
+    <string name="btnSignIn">Acceder</string>
+    <string name="btnGoogleSignIn" translatable="false">Google</string>
+    <string name="btnFacebookSignIn" translatable="false">Facebook</string>
+    <string name="txvName">Nombre:</string>
+    <string name="txvDescription">Descripción:</string>
+    <string name="txvDateCreation">Fecha de creación:</string>
+    <string name="btnChange">Cambiar estado</string>
+</resources>

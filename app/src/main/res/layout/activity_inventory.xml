@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jrl.deint.inventory.InventoryActivity"
+    android:stretchColumns="1">
+
+    <!-- stretchColumns permite que las TableRow recojan el espacio total disponible -->
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txvName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/txvName" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/txvDescription" />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txvDateCreation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/txvDateCreation" />
+
+        <EditText
+            android:id="@+id/edtDateCreation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="date" />
+
+    </TableRow>
+
+    <TableRow>
+        <!-- Solución con LinearLayout -->
+<!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="2"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnChange" />
+
+        </LinearLayout>
+-->
+        <!-- Solución sin LinearLayout -->
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnChange"
+            android:layout_gravity="center"
+            android:layout_span="2"/>
+
+    </TableRow>
+
+</TableLayout>

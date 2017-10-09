@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lnl_login_padding">32dp</dimen>
+    <dimen name="txvSignIn_margin">24dp</dimen>
+    <dimen name="btnSignIn">72dp</dimen>
+    <dimen name="lnl_sign_options">8dp</dimen>
+    <dimen name="btnGoogleSign">8dp</dimen>
+</resources>
