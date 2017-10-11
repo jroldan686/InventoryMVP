@@ -20,7 +20,7 @@
             android:name=".LoginActivity"
             android:theme="@style/LoginTheme" />
         <activity android:name=".InventoryActivity" />
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DashboardActivity" />
     </application>
 
 </manifest>

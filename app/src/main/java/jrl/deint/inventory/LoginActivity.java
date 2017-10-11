@@ -1,5 +1,6 @@
 package jrl.deint.inventory;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView txvSignUp;
     private Button btnSignIn;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(intent);
             }
         });
     }

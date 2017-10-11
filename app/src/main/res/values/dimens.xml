@@ -5,4 +5,7 @@
     <dimen name="btnSignIn">72dp</dimen>
     <dimen name="lnl_sign_options">8dp</dimen>
     <dimen name="btnGoogleSign">8dp</dimen>
+    <dimen name="imgDashboardWidth">0dp</dimen>
+    <dimen name="imgDashboardHeight">0dp</dimen>
+    <dimen name="spcDashboardWidth">30dp</dimen>
 </resources>
