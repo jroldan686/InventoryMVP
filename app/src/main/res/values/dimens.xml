@@ -8,4 +8,6 @@
     <dimen name="imgDashboardWidth">0dp</dimen>
     <dimen name="imgDashboardHeight">0dp</dimen>
     <dimen name="spcDashboardWidth">30dp</dimen>
+    <dimen name="imgvQRancho">50dp</dimen>
+    <dimen name="imgvQRalto">50dp</dimen>
 </resources>
