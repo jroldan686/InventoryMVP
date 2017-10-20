@@ -8,105 +8,163 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context="jrl.deint.inventory.ProductActivity">
 
         <ImageView
             android:id="@+id/imgvProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/imgvProductWidth"
+            android:layout_height="@dimen/imgvProductHeight"
             app:srcCompat="@drawable/products" />
 
         <TextView
             android:id="@+id/txvNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvNombre" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/txvNombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgvProduct" />
 
         <EditText
             android:id="@+id/edtNombre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="40dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvNombre"
+            app:layout_constraintStart_toEndOf="@+id/txvNombre" />
 
         <TextView
             android:id="@+id/txvSerial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvSerial" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvSerial"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvNombre" />
 
         <EditText
             android:id="@+id/edtSerial"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="56dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvSerial"
+            app:layout_constraintStart_toEndOf="@+id/txvSerial" />
 
         <ImageView
             android:id="@+id/imgvQR"
-            android:layout_width="@dimen/imgvQRancho"
-            android:layout_height="@dimen/imgvQRalto"
+            android:layout_width="@dimen/imgvQRWidth"
+            android:layout_height="@dimen/imgvQRHeight"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/edtSerial"
+            app:layout_constraintTop_toBottomOf="@+id/edtNombre"
             app:srcCompat="@drawable/QR_icon" />
 
         <TextView
             android:id="@+id/txvVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvVendedor" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvVendedor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSerial" />
 
         <EditText
             android:id="@+id/edtVendedor"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="32dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvVendedor"
+            app:layout_constraintStart_toEndOf="@+id/txvVendedor" />
 
         <TextView
             android:id="@+id/txvModelo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txvModelo" />
+            android:layout_height="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/txvModelo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvVendedor" />
 
         <EditText
             android:id="@+id/edtModelo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="48dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvModelo"
+            app:layout_constraintStart_toEndOf="@+id/txvModelo" />
 
         <TextView
             android:id="@+id/txvCategoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvCategoria" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/txvCategoria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvModelo" />
 
         <ExpandableListView
             android:id="@+id/elvCategoria"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="@dimen/ExpandableListViewWidth"
+            android:layout_height="@dimen/ExpandableListViewHeight"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txvCategoria"
+            app:layout_constraintTop_toBottomOf="@+id/edtModelo" />
 
         <TextView
             android:id="@+id/txvSubcategoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvSubcategoria" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txvSubcategoria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvCategoria" />
 
         <ExpandableListView
             android:id="@+id/elvSubcategoria"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="@dimen/ExpandableListViewWidth"
+            android:layout_height="@dimen/ExpandableListViewHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txvSubcategoria"
+            app:layout_constraintTop_toBottomOf="@+id/elvCategoria" />
 
         <TextView
             android:id="@+id/txvTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvTipo" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txvTipo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria" />
 
         <ExpandableListView
             android:id="@+id/elvTipo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="@dimen/ExpandableListViewWidth"
+            android:layout_height="@dimen/ExpandableListViewHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txvTipo"
+            app:layout_constraintTop_toBottomOf="@+id/elvSubcategoria" />
+
+<!--
 
         <TextView
             android:id="@+id/txvDescripcion"
@@ -172,5 +230,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine" />
+-->
     </android.support.constraint.ConstraintLayout>
+
 </ScrollView>
