@@ -24,7 +24,7 @@ public class DashboardActivity extends AppCompatActivity {
                         R.drawable.inventory};
         */
 
-        int[] images = {R.drawable.inventory, R.drawable.products, R.drawable.dependences, R.drawable.sections, R.drawable.preferences};
+        int[] images = {R.drawable.inventory, R.drawable.products, R.drawable.dependencies, R.drawable.sections, R.drawable.preferences};
 
         // No se utiliza en Java/Android array de objetos. Se utiliza Vector o Colecciones que son más eficientes.
         //ImageView[] imageViews = new ImageView[images.length];

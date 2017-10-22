@@ -65,7 +65,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/edtSerial"
             app:layout_constraintTop_toBottomOf="@+id/edtNombre"
-            app:srcCompat="@drawable/QR_icon" />
+            app:srcCompat="@drawable/qr_icon" />
 
         <TextView
             android:id="@+id/txvVendedor"
@@ -131,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="28dp"
             android:text="@string/txvSubcategoria"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txvCategoria" />
@@ -150,7 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="28dp"
             android:text="@string/txvTipo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria" />
@@ -159,78 +159,117 @@
             android:id="@+id/elvTipo"
             android:layout_width="@dimen/ExpandableListViewWidth"
             android:layout_height="@dimen/ExpandableListViewHeight"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintStart_toEndOf="@+id/txvTipo"
             app:layout_constraintTop_toBottomOf="@+id/elvSubcategoria" />
-
-<!--
 
         <TextView
             android:id="@+id/txvDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvDescripcion" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvDescripcion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvTipo" />
 
         <EditText
             android:id="@+id/edtDescripcion"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvDescripcion"
+            app:layout_constraintStart_toEndOf="@+id/txvDescripcion"
+            app:layout_constraintTop_toBottomOf="@+id/elvTipo" />
 
         <TextView
             android:id="@+id/txvPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvPrecio" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvPrecio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvDescripcion" />
 
         <EditText
             android:id="@+id/edtPrecio"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="56dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvPrecio"
+            app:layout_constraintStart_toEndOf="@+id/txvPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/edtDescripcion" />
 
         <TextView
             android:id="@+id/txvFechaCompra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvFechaCompra" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvFechaCompra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvPrecio" />
 
         <EditText
             android:id="@+id/edtFechaCompra"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="40dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvFechaCompra"
+            app:layout_constraintStart_toEndOf="@+id/txvFechaCompra"
+            app:layout_constraintTop_toBottomOf="@+id/edtPrecio" />
 
         <TextView
             android:id="@+id/txvUrl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvUrl" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvUrl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvFechaCompra" />
 
         <EditText
             android:id="@+id/edtUrl"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="80dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvUrl"
+            app:layout_constraintStart_toEndOf="@+id/txvUrl"
+            app:layout_constraintTop_toBottomOf="@+id/edtFechaCompra" />
 
         <TextView
             android:id="@+id/txvNotas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txvNotas" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txvNotas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvUrl" />
 
         <EditText
             android:id="@+id/edtNotas"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/EditTextHeight"
+            android:layout_marginStart="60dp"
             android:ems="10"
-            android:inputType="textMultiLine" />
--->
+            android:inputType="textMultiLine"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvNotas"
+            app:layout_constraintStart_toEndOf="@+id/txvNotas"
+            app:layout_constraintTop_toBottomOf="@+id/edtUrl" />
+
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>

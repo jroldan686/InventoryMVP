@@ -140,4 +140,49 @@
 -->
     <!--<Space android:layout_width="@dimen/spcDashboardWidth" />-->
 
+    <ImageView
+        android:id="@+id/imgvInventoryOption"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/inventory2"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill" />
+
+    <ImageView
+        android:id="@+id/imgvProductOption"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/products"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill" />
+
+    <ImageView
+        android:id="@+id/imgvDependenciesOption"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/dependencies"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill" />
+
+    <ImageView
+        android:id="@+id/imgvSectionsOption"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/sections"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill" />
+
+    <ImageView
+        android:id="@+id/imgvPreferencesOption"
+        android:layout_width="@dimen/imgDashboardWidth"
+        android:layout_height="@dimen/imgDashboardHeight"
+        app:srcCompat="@drawable/preferences"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_gravity="fill" />
+
 </android.support.v7.widget.GridLayout>
