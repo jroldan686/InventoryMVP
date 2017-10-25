@@ -139,7 +139,7 @@
         app:layout_gravity="fill" />
 -->
     <!--<Space android:layout_width="@dimen/spcDashboardWidth" />-->
-
+<!--
     <ImageView
         android:id="@+id/imgvInventoryOption"
         android:layout_width="@dimen/imgDashboardWidth"
@@ -184,5 +184,5 @@
         app:layout_columnWeight="1"
         app:layout_rowWeight="1"
         app:layout_gravity="fill" />
-
+-->
 </android.support.v7.widget.GridLayout>

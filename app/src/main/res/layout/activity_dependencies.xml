@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context="jrl.deint.inventory.DependenciesActivity">
 
+    <ListView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:id="@+id/lsvDependencies" />
+
 </android.support.constraint.ConstraintLayout>

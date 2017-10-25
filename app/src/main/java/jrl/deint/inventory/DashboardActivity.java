@@ -24,7 +24,7 @@ public class DashboardActivity extends AppCompatActivity {
                         R.drawable.inventory};
         */
 
-        int[] images = {R.drawable.inventory, R.drawable.products, R.drawable.dependencies, R.drawable.sections, R.drawable.preferences};
+        int[] images = {R.drawable.inventory2, R.drawable.products, R.drawable.dependencies, R.drawable.sections, R.drawable.preferences};
 
         // No se utiliza en Java/Android array de objetos. Se utiliza Vector o Colecciones que son más eficientes.
         //ImageView[] imageViews = new ImageView[images.length];
@@ -56,6 +56,7 @@ public class DashboardActivity extends AppCompatActivity {
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             imageView.setImageResource(images[i]);
             imageView.setLayoutParams(params);
+            imageView.setOnClickListener(new ClickListenerDashboard());
             gridDashboard.addView(imageView);
         }
 
@@ -67,7 +68,7 @@ public class DashboardActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = null;
             switch (v.getId()) {
-                case R.drawable.inventory:
+                case R.drawable.inventory2:
                     intent = new Intent(DashboardActivity.this, InventoryActivity.class);
                     break;
                 case R.drawable.products:
