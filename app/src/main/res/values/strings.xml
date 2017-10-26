@@ -24,4 +24,5 @@
     <string name="txvFechaCompra">F.compra:</string>
     <string name="txvUrl">Url:</string>
     <string name="txvNotas">Notas:</string>
+    <string name="txvShortName">Nombre corto:</string>
 </resources>
