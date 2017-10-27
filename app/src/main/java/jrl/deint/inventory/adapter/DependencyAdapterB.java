@@ -17,6 +17,7 @@ import jrl.deint.inventory.repository.DependencyRepository;
 
 /**
  * Created by usuario on 26/10/17.
+ * ES LA PRIMERA SOLUCIÓN NO OPTIMIZADA
  */
 
 public class DependencyAdapterB extends ArrayAdapter<Dependency> {
@@ -28,7 +29,10 @@ public class DependencyAdapterB extends ArrayAdapter<Dependency> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        DependencyHolder dependencyHolder;
+        MaterialLetterIcon mliIcon;
+        TextView txvName;
+        TextView txvShortName;
+
         View view = convertView;
 
         // Sólo se va a crear el objeto view las 8 primeras veces que se va a empezar a mostrar en pantalla hasta rellenarla
@@ -49,29 +53,22 @@ public class DependencyAdapterB extends ArrayAdapter<Dependency> {
 
             // Con null indica que no hay que introducirlo en item_dependency
             view = inflater.inflate(R.layout.item_dependency, null);
-            dependencyHolder = new DependencyHolder();
 
-            // 3. Inicializar las variables a los objetos ya creados de los widget del xml. ¡¡CUIDADO View.findViewId!!
+        }
 
-            dependencyHolder.mliIcon = (MaterialLetterIcon) view.findViewById(R.id.mliIcon);
-            dependencyHolder.txvName = (TextView) view.findViewById(R.id.txvName);
-            dependencyHolder.txvShortName = (TextView) view.findViewById(R.id.txvShortName);
-            view.setTag(dependencyHolder);
-        } else
-            dependencyHolder = (DependencyHolder)view.getTag();
+        // 3. Inicializar las variables a los objetos ya creados de los widget del xml. ¡¡CUIDADO View.findViewId!!
+
+        mliIcon = (MaterialLetterIcon) view.findViewById(R.id.mliIcon);
+        txvName = (TextView) view.findViewById(R.id.txvName);
+        txvShortName = (TextView) view.findViewById(R.id.txvShortName);
 
         // 4. Mostrar los datos del ArrayList mediante position.
-        dependencyHolder.mliIcon.setLetter(getItem(position).getShortname().substring(0, 1));
-        dependencyHolder.txvName.setText(getItem(position).getName());
-        dependencyHolder.txvShortName.setText(getItem(position).getShortname());
+        mliIcon.setLetter(getItem(position).getShortname().substring(0, 1));
+        txvName.setText(getItem(position).getName());
+        txvShortName.setText(getItem(position).getShortname());
 
         // Busca con findById tantos elementos como haya en la vista
 
         return view;
-    }
-    class DependencyHolder {
-        MaterialLetterIcon mliIcon;
-        TextView txvName;
-        TextView txvShortName;
     }
 }

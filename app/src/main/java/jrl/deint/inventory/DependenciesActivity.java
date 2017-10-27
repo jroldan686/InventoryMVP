@@ -1,20 +1,16 @@
 package jrl.deint.inventory;
 
 import android.app.ListActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 
-import jrl.deint.inventory.adapter.DependencyAdapter;
-import jrl.deint.inventory.pojo.Dependency;
-import jrl.deint.inventory.pojo.InventoryApplication;
-import jrl.deint.inventory.repository.DependencyRepository;
+
+import jrl.deint.inventory.adapter.DependencyAdapterA;
 
 public class DependenciesActivity extends ListActivity {
 
     //private ArrayAdapter<Dependency> adapter;
 
-    private DependencyAdapter adapter;
+    private DependencyAdapterA adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +24,8 @@ public class DependenciesActivity extends ListActivity {
         getListView().setAdapter(dependencies);
         */
         // CASO 2: Adapter personalizado
-        adapter = new DependencyAdapter(this);
+        adapter = new DependencyAdapterA(this);
         getListView().setAdapter(adapter);
     }
+
 }

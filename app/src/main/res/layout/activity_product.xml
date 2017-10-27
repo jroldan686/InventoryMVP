@@ -18,11 +18,12 @@
             android:layout_height="@dimen/imgvProductHeight"
             app:srcCompat="@drawable/products" />
 
-        <android.support.constraint.Barrier
-            android:id="@+id/brBarrera"
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:barrierDirection="left" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="96dp" />
 
         <TextView
             android:id="@+id/txvNombre"
@@ -38,11 +39,11 @@
             android:id="@+id/edtNombre"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvNombre"
-            app:layout_constraintStart_toEndOf="@+id/txvNombre" />
+            app:layout_constraintStart_toEndOf="@id/guideline" />
 
         <TextView
             android:id="@+id/txvSerial"
@@ -58,11 +59,11 @@
             android:id="@+id/edtSerial"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvSerial"
-            app:layout_constraintStart_toEndOf="@+id/txvSerial" />
+            app:layout_constraintStart_toEndOf="@id/guideline" />
 
         <ImageView
             android:id="@+id/imgvQR"
@@ -88,11 +89,11 @@
             android:id="@+id/edtVendedor"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvVendedor"
-            app:layout_constraintStart_toEndOf="@+id/txvVendedor" />
+            app:layout_constraintStart_toEndOf="@id/guideline" />
 
         <TextView
             android:id="@+id/txvModelo"
@@ -108,11 +109,11 @@
             android:id="@+id/edtModelo"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvModelo"
-            app:layout_constraintStart_toEndOf="@+id/txvModelo" />
+            app:layout_constraintStart_toEndOf="@id/guideline" />
 
         <TextView
             android:id="@+id/txvCategoria"
@@ -124,13 +125,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txvModelo" />
 
-        <ExpandableListView
-            android:id="@+id/elvCategoria"
-            android:layout_width="@dimen/ExpandableListViewWidth"
-            android:layout_height="@dimen/ExpandableListViewHeight"
-            android:layout_marginStart="36dp"
+        <Spinner
+            android:id="@+id/spnCategoria"
+            android:layout_width="@dimen/SpinnerWidth"
+            android:layout_height="@dimen/SpinnerHeight"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toEndOf="@+id/txvCategoria"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/edtModelo" />
 
         <TextView
@@ -143,14 +144,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txvCategoria" />
 
-        <ExpandableListView
-            android:id="@+id/elvSubcategoria"
-            android:layout_width="@dimen/ExpandableListViewWidth"
-            android:layout_height="@dimen/ExpandableListViewHeight"
-            android:layout_marginStart="16dp"
+        <Spinner
+            android:id="@+id/spnSubcategoria"
+            android:layout_width="@dimen/SpinnerWidth"
+            android:layout_height="@dimen/SpinnerHeight"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toEndOf="@+id/txvSubcategoria"
-            app:layout_constraintTop_toBottomOf="@+id/elvCategoria" />
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/spnCategoria" />
 
         <TextView
             android:id="@+id/txvTipo"
@@ -162,14 +163,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txvSubcategoria" />
 
-        <ExpandableListView
+        <Spinner
             android:id="@+id/elvTipo"
-            android:layout_width="@dimen/ExpandableListViewWidth"
-            android:layout_height="@dimen/ExpandableListViewHeight"
-            android:layout_marginStart="72dp"
+            android:layout_width="@dimen/SpinnerWidth"
+            android:layout_height="@dimen/SpinnerHeight"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/txvTipo"
-            app:layout_constraintTop_toBottomOf="@+id/elvSubcategoria" />
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/spnSubcategoria" />
 
         <TextView
             android:id="@+id/txvDescripcion"
@@ -185,12 +186,12 @@
             android:id="@+id/edtDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="textMultiLine"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvDescripcion"
-            app:layout_constraintStart_toEndOf="@+id/txvDescripcion"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/elvTipo" />
 
         <TextView
@@ -207,11 +208,11 @@
             android:id="@+id/edtPrecio"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvPrecio"
-            app:layout_constraintStart_toEndOf="@+id/txvPrecio"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/edtDescripcion" />
 
         <TextView
@@ -228,11 +229,11 @@
             android:id="@+id/edtFechaCompra"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvFechaCompra"
-            app:layout_constraintStart_toEndOf="@+id/txvFechaCompra"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/edtPrecio" />
 
         <TextView
@@ -249,11 +250,11 @@
             android:id="@+id/edtUrl"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvUrl"
-            app:layout_constraintStart_toEndOf="@+id/txvUrl"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/edtFechaCompra" />
 
         <TextView
@@ -270,11 +271,11 @@
             android:id="@+id/edtNotas"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/EditTextHeight"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="textMultiLine"
             app:layout_constraintBaseline_toBaselineOf="@+id/txvNotas"
-            app:layout_constraintStart_toEndOf="@+id/txvNotas"
+            app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/edtUrl" />
 
     </android.support.constraint.ConstraintLayout>

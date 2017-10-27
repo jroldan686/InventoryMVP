@@ -1,10 +1,8 @@
 package jrl.deint.inventory.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.github.ivbaranov.mli.MaterialLetterIcon;
-
-import org.w3c.dom.Text;
 
 import jrl.deint.inventory.R;
 import jrl.deint.inventory.pojo.Dependency;
@@ -24,12 +20,7 @@ import jrl.deint.inventory.repository.DependencyRepository;
  */
 
 public class DependencyAdapter extends ArrayAdapter<Dependency> {
-    /*
     public DependencyAdapter(@NonNull Context context, int resource, @NonNull Dependency[] objects) {
-        super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
-    }
-    */
-    public DependencyAdapter(@NonNull Context context) {
         super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
     }
 
@@ -37,41 +28,50 @@ public class DependencyAdapter extends ArrayAdapter<Dependency> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        MaterialLetterIcon mliIcon;
-        TextView txvName;
-        TextView txvShortName;
+        DependencyHolder dependencyHolder;
+        View view = convertView;
 
-        View view;
+        // Sólo se va a crear el objeto view las 8 primeras veces que se va a empezar a mostrar en pantalla hasta rellenarla
+        if(convertView == null) {
 
-        // 1. Obtener el servicio de sistema Layout Inflater en el contexto
+            // 1. Obtener el servicio de sistema Layout Inflater en el contexto
 
-        // Accede de forma genérica al servicio del sistema para inflar la vista del objeto view
-        //LayoutInflater inflater = LayoutInflater.from(getContext());
+            // Accede de forma genérica al servicio del sistema para inflar la vista del objeto view
+            //LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        // Forma no recomendada, porque se obliga al contexto a provenir de una actividad
-        //LayoutInflater inflater = ((Activity)getContext()).getLayoutInflater();
+            // Forma no recomendada, porque se obliga al contexto a provenir de una actividad
+            //LayoutInflater inflater = ((Activity)getContext()).getLayoutInflater();
 
-        // De esta forma se accede directamente al servicio específico
-        LayoutInflater inflater=(LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            // De esta forma se accede directamente al servicio específico
+            LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        // 2. Inflar la vista. Crea en memoria el objeto View con todos los widget del xml: item_dependency.xml
+            // 2. Inflar la vista. Crea en memoria el objeto View con todos los widget del xml: item_dependency.xml
 
-        // Con null indica que no hay que introducirlo en item_dependency
-        view = inflater.inflate(R.layout.item_dependency, null);
+            // Con null indica que no hay que introducirlo en item_dependency
+            view = inflater.inflate(R.layout.item_dependency, null);
+            dependencyHolder = new DependencyHolder();
 
-        // 3. Inicializar las variables a los objetos ya creados de los widget del xml. ¡¡CUIDADO View.findViewId!!
+            // 3. Inicializar las variables a los objetos ya creados de los widget del xml. ¡¡CUIDADO View.findViewId!!
 
-        mliIcon = (MaterialLetterIcon)view.findViewById(R.id.mliIcon);
-        txvName = (TextView)view.findViewById(R.id.txvName);
-        txvShortName = (TextView)view.findViewById(R.id.txvShortName);
+            dependencyHolder.mliIcon = (MaterialLetterIcon) view.findViewById(R.id.mliIcon);
+            dependencyHolder.txvName = (TextView) view.findViewById(R.id.txvName);
+            dependencyHolder.txvShortName = (TextView) view.findViewById(R.id.txvShortName);
+            view.setTag(dependencyHolder);
+        } else
+            dependencyHolder = (DependencyHolder)view.getTag();
 
         // 4. Mostrar los datos del ArrayList mediante position.
-        mliIcon.setLetter(getItem(position).getShortname().substring(0, 1));
-        txvName.setText(getItem(position).getName());
-        txvShortName.setText(getItem(position).getShortname());
+        dependencyHolder.mliIcon.setLetter(getItem(position).getShortname().substring(0, 1));
+        dependencyHolder.txvName.setText(getItem(position).getName());
+        dependencyHolder.txvShortName.setText(getItem(position).getShortname());
 
         // Busca con findById tantos elementos como haya en la vista
 
         return view;
+    }
+    class DependencyHolder {
+        MaterialLetterIcon mliIcon;
+        TextView txvName;
+        TextView txvShortName;
     }
 }

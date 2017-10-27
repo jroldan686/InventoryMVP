@@ -13,12 +13,12 @@
     <dimen name="imgvQRWidth">50dp</dimen>
     <dimen name="imgvQRHeight">50dp</dimen>
     <dimen name="EditTextHeight">35dp</dimen>
-    <dimen name="ExpandableListViewWidth">214dp</dimen>
-    <dimen name="ExpandableListViewHeight">35dp</dimen>
+    <dimen name="SpinnerWidth">214dp</dimen>
+    <dimen name="SpinnerHeight">35dp</dimen>
     <dimen name="letter_icon_size">48dp</dimen>
     <dimen name="letter_icon_padding_left">16dp</dimen>
     <dimen name="list_text_padding_left">72dp</dimen>
     <dimen name="list_padding_left">8dp</dimen>
-    <dimen name="list_primary_text">16dp</dimen>
-    <dimen name="list_secundary_text">16dp</dimen>
+    <dimen name="list_primary_text">16sp</dimen>
+    <dimen name="list_secundary_text">14sp</dimen>
 </resources>
