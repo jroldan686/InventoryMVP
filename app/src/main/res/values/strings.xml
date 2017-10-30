@@ -25,4 +25,7 @@
     <string name="txvUrl" translatable="false">Url:</string>
     <string name="txvNotas">Notas:</string>
     <string name="txvShortName">Nombre corto:</string>
+    <string name="tgbEnabled">Disponibilidad</string>
+    <string name="txvDefault">Por defecto</string>
+    <string name="menuTitle">Guardar</string>
 </resources>

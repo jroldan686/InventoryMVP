@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jrl.deint.inventory.SectionsActivity">
+    tools:context="jrl.deint.inventory.SectionActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rcvSections"/>
 </android.support.constraint.ConstraintLayout>

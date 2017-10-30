@@ -78,7 +78,7 @@ public class DashboardActivity extends AppCompatActivity {
                     intent = new Intent(DashboardActivity.this, DependenciesActivity.class);
                     break;
                 case R.drawable.sections:
-                    intent = new Intent(DashboardActivity.this, SectionsActivity.class);
+                    intent = new Intent(DashboardActivity.this, SectionActivity.class);
                     break;
                 case R.drawable.preferences:
                     intent = new Intent(DashboardActivity.this, PreferencesActivity.class);
