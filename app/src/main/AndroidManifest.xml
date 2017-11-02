@@ -26,6 +26,9 @@
         <activity android:name=".DependenciesActivity" />
         <activity android:name=".PreferencesActivity" />
         <activity android:name=".SectionActivity" />
+        <activity android:name=".GeneralSettingActivity" />
+        <activity android:name=".AccountSettingActivity" />
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

@@ -22,15 +22,15 @@ public class SectionActivity extends AppCompatActivity {
         rcvSections = (RecyclerView) findViewById(R.id.rcvSections);
         rcvSections.setHasFixedSize(true);
 
+        if(savedInstanceState != null)
+            sectionAdapter = new SectionAdapter(savedInstanceState.<Section>getParcelableArrayList("section"));
+        else
+            sectionAdapter = new SectionAdapter();
+
         // Indicamos el tipo de LayoutManager
         //rcvSections.setLayoutManager(new LinearLayoutManager(this));
         // Pone los elementos en dos columnas
         rcvSections.setLayoutManager(new GridLayoutManager(this, sectionAdapter.getItemCount()));
-        if(savedInstanceState != null)
-            sectionAdapter = new SectionAdapter(savedInstanceState.<Section>getParcelableArrayList("section"));
-        else
-
-        sectionAdapter = new SectionAdapter();
         rcvSections.setAdapter(sectionAdapter);
     }
 

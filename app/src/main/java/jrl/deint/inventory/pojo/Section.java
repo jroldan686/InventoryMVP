@@ -99,7 +99,7 @@ public class Section implements Parcelable {
         dest.writeString(shortname);
         dest.writeString(description);
         dest.writeInt(dependencyId);
-        dest.writeByte(enabled);
-        dest.writeByte(_default);
+        //dest.writeByte(enabled);
+        //dest.writeByte(_default);
     }
 }
