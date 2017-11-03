@@ -15,7 +15,7 @@ public class AboutActivity extends AppCompatActivity {
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.about_icon_email)
-                .addGroup("Contacte con nosotros")
+                .addGroup("Conecte con nosotros")
                 .addEmail("jroldan686@gmail.com")
                 .addWebsite("https://github.com/jroldan686/Inventory/")
                 .addGitHub("jroldan686")

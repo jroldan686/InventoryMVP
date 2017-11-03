@@ -3,6 +3,7 @@ package jrl.deint.inventory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,7 +31,8 @@ public class SectionActivity extends AppCompatActivity {
         // Indicamos el tipo de LayoutManager
         //rcvSections.setLayoutManager(new LinearLayoutManager(this));
         // Pone los elementos en dos columnas
-        rcvSections.setLayoutManager(new GridLayoutManager(this, sectionAdapter.getItemCount()));
+        //rcvSections.setLayoutManager(new GridLayoutManager(this, sectionAdapter.getItemCount()));
+        rcvSections.setLayoutManager(new LinearLayoutManager(this));
         rcvSections.setAdapter(sectionAdapter);
     }
 

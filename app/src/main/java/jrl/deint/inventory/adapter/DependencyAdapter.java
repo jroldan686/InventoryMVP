@@ -20,7 +20,7 @@ import jrl.deint.inventory.repository.DependencyRepository;
  */
 
 public class DependencyAdapter extends ArrayAdapter<Dependency> {
-    public DependencyAdapter(@NonNull Context context, int resource, @NonNull Dependency[] objects) {
+    public DependencyAdapter(@NonNull Context context) {
         super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
     }
 

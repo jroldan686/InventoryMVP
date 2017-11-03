@@ -32,6 +32,8 @@ public class SectionRepository {
     public void initialize() {
         addSection(new Section(1, "Armario izquierdo puerta izquierda", "AIPI", "Interior puerta izquierda del armario de la izquierda", 1, true, true));
         addSection(new Section(2, "Armario izquierda puerta derecha", "AIPD", "Interior puerta derecha del armario de la izquierda", 1, true, false));
+        addSection(new Section(3, "Armario derecho puerta izquierda", "ADPI", "Interior puerta izquierda del armario de la derecha", 1, true, false));
+        addSection(new Section(4, "Armario derecho puerta derecha", "ADPD", "Interior puerta derecha del armario de la derecha", 1, true, false));
     }
 
     /* Patrón Singletón */
