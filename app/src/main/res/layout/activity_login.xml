@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jrl.deint.inventory.LoginActivity"
+    tools:context="jrl.deint.inventoryMVP.LoginActivity"
     android:background="@color/colorPrimary"
     android:padding="@dimen/lnl_login_padding">
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jrl.deint.inventory">
+    package="jrl.deint.inventoryMVP">
 
     <application
-        android:name=".InventoryApplication"
+        android:name="jrl.deint.inventoryMVP.InventoryApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_inventory"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_inventory"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name="jrl.deint.inventoryMVP.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,18 +18,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="jrl.deint.inventoryMVP.LoginActivity"
             android:theme="@style/LoginTheme" />
-        <activity android:name=".InventoryActivity" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".ProductActivity" />
-        <activity android:name=".DependenciesActivity" />
-        <activity android:name=".PreferencesActivity" />
-        <activity android:name=".SectionActivity" />
-        <activity android:name=".GeneralSettingActivity" />
-        <activity android:name=".AccountSettingActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".AddDependencyActivity"></activity>
+        <activity android:name="jrl.deint.inventoryMVP.InventoryActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.DashboardActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.ProductActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.DependenciesActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.PreferencesActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.SectionActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.GeneralSettingActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.AccountSettingActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.AboutActivity" />
+        <activity android:name="jrl.deint.inventoryMVP.AddDependencyActivity"></activity>
     </application>
 
 </manifest>
