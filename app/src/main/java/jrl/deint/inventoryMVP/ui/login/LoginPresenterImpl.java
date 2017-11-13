@@ -1,10 +1,12 @@
 package jrl.deint.inventoryMVP.ui.login;
 
+import jrl.deint.inventoryMVP.base.BaseActivity;
+
 /**
  * Created by usuario on 10/11/17.
  */
 
-public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
+public class LoginPresenterImpl extends BaseActivity implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
 
     private LoginView loginView;
     private LoginInteractorImpl loginInteractor;
@@ -38,5 +40,12 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLog
     @Override
     public void onPasswordError() {
         loginView.setPasswordError();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        loginView = null;
+        loginInteractor = null;
     }
 }

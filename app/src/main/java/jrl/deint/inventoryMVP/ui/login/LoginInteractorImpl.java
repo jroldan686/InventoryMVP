@@ -1,10 +1,12 @@
 package jrl.deint.inventoryMVP.ui.login;
 
+import jrl.deint.inventoryMVP.base.BaseActivity;
+
 /**
  * Created by usuario on 10/11/17.
  */
 
-public class LoginInteractorImpl {
+public class LoginInteractorImpl extends BaseActivity {
 
     @Override
     public void validateCredentials(String user, String password, LoginInteractor.OnLoginFinishedListener listener) {
@@ -14,7 +16,7 @@ public class LoginInteractorImpl {
         if else
             listener.onUserEmptyError();
         if else
-            listener.onPasseordError();
+            listener.onPasswordError();
         else
             listener.onSuccess();
         // Y es correcto

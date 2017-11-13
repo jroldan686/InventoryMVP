@@ -15,5 +15,7 @@ public interface LoginInteractor {
         void onPasswordEmptyError();
 
         void onPasswordError();
+
+        void onSuccess();
     }
 }
