@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name" translatable="false">Inventory</string>
+    <string name="txvSignIn">Acceder</string>
+    <string name="txvUser">Usuario:</string>
+    <string name="txvPassword">Contraseña:</string>
+    <string name="ckbRemember">Recordar</string>
+    <string name="txvSignUp">Registrarse</string>
+    <string name="btnSignIn">Acceder</string>
+    <string name="btnGoogleSignIn" translatable="false">Google</string>
+    <string name="btnFacebookSignIn" translatable="false">Facebook</string>
+    <string name="txvName">Nombre:</string>
+    <string name="txvDescription">Descripción:</string>
+    <string name="txvDateCreation">Fecha de creación:</string>
+    <string name="btnChange">Cambiar estado</string>
+    <string name="txvNombre">Nombre:</string>
+    <string name="txvSerial" translatable="false">Serial:</string>
+    <string name="txvVendedor">Vendedor:</string>
+    <string name="txvModelo">Modelo:</string>
+    <string name="txvCategoria">Categoria:</string>
+    <string name="txvSubcategoria">Subcategoria:</string>
+    <string name="txvTipo">Tipo:</string>
+    <string name="txvDescripcion">Descripcion:</string>
+    <string name="txvPrecio">Precio:</string>
+    <string name="txvFechaCompra">F.compra:</string>
+    <string name="txvUrl" translatable="false">Url:</string>
+    <string name="txvNotas">Notas:</string>
+    <string name="txvShortName">Nombre corto:</string>
+    <string name="tgbEnabled">Disponibilidad</string>
+    <string name="txvDefault">Por defecto</string>
+    <string name="menuTitle">Guardar</string>
+    <string name="tietName">Nombre</string>
+    <string name="tietShortName">Nombre corto</string>
+    <string name="tietDescription">Descripción</string>
+</resources>

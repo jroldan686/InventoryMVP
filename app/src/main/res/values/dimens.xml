@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lnl_login_padding">32dp</dimen>
+    <dimen name="txvSignIn_margin">24dp</dimen>
+    <dimen name="btnSignIn">72dp</dimen>
+    <dimen name="lnl_sign_options">8dp</dimen>
+    <dimen name="btnGoogleSign">8dp</dimen>
+    <dimen name="imgDashboardWidth">0dp</dimen>
+    <dimen name="imgDashboardHeight">0dp</dimen>
+    <dimen name="spcDashboardWidth">30dp</dimen>
+    <dimen name="imgvProductWidth">400dp</dimen>
+    <dimen name="imgvProductHeight">200dp</dimen>
+    <dimen name="imgvQRWidth">50dp</dimen>
+    <dimen name="imgvQRHeight">50dp</dimen>
+    <dimen name="EditTextHeight">35dp</dimen>
+    <dimen name="SpinnerWidth">214dp</dimen>
+    <dimen name="SpinnerHeight">35dp</dimen>
+    <dimen name="letter_icon_size">48dp</dimen>
+    <dimen name="letter_icon_padding_left">16dp</dimen>
+    <dimen name="list_text_padding_left">72dp</dimen>
+    <dimen name="list_padding_left">8dp</dimen>
+    <dimen name="list_primary_text">16sp</dimen>
+    <dimen name="list_secundary_text">14sp</dimen>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jrl.deint.inventoryMVP.LoginActivity"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/lnl_login_padding">
+
+    <TextView
+        android:id="@+id/txvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/txvSignIn"
+        android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"/>
+
+    <TextView
+        android:id="@+id/txvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/txvUser"
+        android:textAppearance="@android:style/TextAppearance.Small"/>
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="@dimen/txvSignIn_margin"
+        android:background="@drawable/shape_edittext"/>
+
+    <TextView
+        android:id="@+id/txvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/txvPassword"
+        android:textAppearance="@android:style/TextAppearance.Small"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginBottom="@dimen/txvSignIn_margin"
+        android:background="@drawable/shape_edittext"/>
+
+    <LinearLayout
+        android:id="@+id/lnlSignOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/lnl_sign_options">
+
+        <CheckBox
+            android:id="@+id/ckbRemember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/ckbRemember"
+            style="@style/Widget.CompoundButton.Checkbox" />
+        <!-- app:buttonTint="@android:color/white" -->
+        <!-- android:theme="@style/Widget.Checkbox" -->
+
+        <TextView
+            android:id="@+id/txvSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/txvSignUp"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+    </LinearLayout>
+    <!-- Cuidado al indicar el margen en un estilo y en la etiqueta porque se redibuja el
+    componente, con lo cual se carga de trabajo a la GPU de operación innecesaria -->
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/btnSignIn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/btnSignIn"
+        android:background="@color/colorPrimaryDark"
+        style="@style/Widget.Button.Transparent"/>
+
+    <Button
+        android:id="@+id/btnGoogleSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/btnGoogleSignIn"
+        android:drawableLeft="@drawable/ic_google"
+        android:background="@color/colorGoogle"
+        android:layout_marginBottom="@dimen/btnGoogleSign"
+        style="@style/Widget.Button.Transparent"/>
+
+    <Button
+        android:id="@+id/btnFacebookSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/btnFacebookSignIn"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:background="@color/colorFacebook"
+        style="@style/Widget.Button.Transparent"/>
+
+</LinearLayout>

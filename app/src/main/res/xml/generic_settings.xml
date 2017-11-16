@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_category_general">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="@string/pref_title_showimage"
+            android:summary="@string/pref_summary_showimage"
+            android:summaryOff="Listados sin imágenes"
+            android:summaryOn="Listados con imágenes" />
+
+        <ListPreference
+            android:key="numcolumn"
+            android:summary="@string/pref_summary_numcolumn"
+            android:title="@string/pref_title_numcolumn"
+            android:entries="@array/pref_entries_numcolumn"
+            android:entryValues="@array/pref_entriesvalues_numcolumn"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
+
+    <!-- Aquí se muestra una barra divisoria porque son distintas preferencias -->
+    <Preference
+        android:key="about"
+        android:title="@string/pref_title_about">
+        <intent
+            android:targetClass="jrl.deint.inventory.AboutActivity"
+            android:targetPackage="jrl.deint.inventory" />
+    </Preference>
+
+</PreferenceScreen>
