@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
+import java.util.ArrayList;
+
 import jrl.deint.inventoryMVP.R;
-import jrl.deint.inventoryMVP.pojo.Dependency;
+import jrl.deint.inventoryMVP.data.db.model.Dependency;
 import jrl.deint.inventoryMVP.repository.DependencyRepository;
 
 /**
@@ -20,8 +22,16 @@ import jrl.deint.inventoryMVP.repository.DependencyRepository;
  */
 
 public class DependencyAdapter extends ArrayAdapter<Dependency> {
+
+    /**
+     * Se crea una copia del ArrayList que se tiene en DependencyRepository
+     * para tener una copia local en el Adapter que se pueda modificar sin
+     * cambiar los datos originales
+     * @param context
+     */
     public DependencyAdapter(@NonNull Context context) {
-        super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
+        super(context, R.layout.item_dependency, new ArrayList<>(DependencyRepository.getInstance().getDependencies()));
+        //sort(new Dependency.DependencyOrderByShortName());
     }
 
     @NonNull

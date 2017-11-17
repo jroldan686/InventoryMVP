@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.inventory;
 
 import android.content.Intent;
 import android.graphics.Paint;
@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+import jrl.deint.inventoryMVP.R;
+import jrl.deint.inventoryMVP.ui.dashboard.DashboardActivity;
+
+public class InventoryMVPActivity extends AppCompatActivity {
 
     private TextView txvSignUp;
     private Button btnSignIn;
@@ -25,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                intent = new Intent(InventoryMVPActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });

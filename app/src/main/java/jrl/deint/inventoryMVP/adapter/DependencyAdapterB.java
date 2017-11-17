@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 import jrl.deint.inventoryMVP.R;
-import jrl.deint.inventoryMVP.pojo.Dependency;
+import jrl.deint.inventoryMVP.data.db.model.Dependency;
 import jrl.deint.inventoryMVP.repository.DependencyRepository;
 
 /**

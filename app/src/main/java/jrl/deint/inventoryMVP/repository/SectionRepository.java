@@ -2,7 +2,7 @@ package jrl.deint.inventoryMVP.repository;
 
 import java.util.ArrayList;
 
-import jrl.deint.inventoryMVP.pojo.Section;
+import jrl.deint.inventoryMVP.data.db.model.Section;
 
 /**
  * Created by usuario on 26/10/17.

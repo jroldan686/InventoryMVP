@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.dependency;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
 
 
+import jrl.deint.inventoryMVP.R;
 import jrl.deint.inventoryMVP.adapter.DependencyAdapterA;
 
 public class DependenciesActivity extends AppCompatActivity {

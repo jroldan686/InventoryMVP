@@ -3,11 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InventoryMVP.iml" filepath="$PROJECT_DIR$/InventoryMVP.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/InventoryMVP.iml" filepath="$PROJECT_DIR$/InventoryMVP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-=======
->>>>>>> e00dc83e1d0120b896c439e4532e9afdaeef6006
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

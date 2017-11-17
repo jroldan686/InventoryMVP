@@ -1,8 +1,8 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.inventory;
 
 import android.app.Application;
 import java.util.ArrayList;
-import jrl.deint.inventoryMVP.pojo.Dependency;
+import jrl.deint.inventoryMVP.data.db.model.Dependency;
 
 public class InventoryApplication extends Application {
 

@@ -1,9 +1,10 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.about;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import jrl.deint.inventoryMVP.R;
 import mehdi.sakout.aboutpage.AboutPage;
 
 public class AboutActivity extends AppCompatActivity {

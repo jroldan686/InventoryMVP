@@ -1,8 +1,9 @@
 package jrl.deint.inventoryMVP.repository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-import jrl.deint.inventoryMVP.pojo.Dependency;
+import jrl.deint.inventoryMVP.data.db.model.Dependency;
 
 /**
  * Created by usuario on 26/10/17.
@@ -52,6 +53,13 @@ public class DependencyRepository {
     }
 
     public ArrayList<Dependency> getDependencies() {
+        /**
+         * El ArrayList se ordena según el/los criterio/s del método compareTo
+         * de la interfaz Comparable
+         */
+        Collections.sort(dependencies);
+        // Si se desea que sort() use Comparator, se pasa como segundo parámetro
+        Collections.sort(dependencies, new Dependency.DependencyOrderByShortName());
         return dependencies;
     }
 }

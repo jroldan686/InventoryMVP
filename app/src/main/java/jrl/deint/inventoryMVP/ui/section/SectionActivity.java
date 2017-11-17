@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.section;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 
+import jrl.deint.inventoryMVP.R;
 import jrl.deint.inventoryMVP.adapter.SectionAdapter;
-import jrl.deint.inventoryMVP.pojo.Section;
+import jrl.deint.inventoryMVP.data.db.model.Section;
 
 public class SectionActivity extends AppCompatActivity {
 

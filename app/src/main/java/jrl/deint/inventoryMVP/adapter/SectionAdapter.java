@@ -13,7 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 
 import jrl.deint.inventoryMVP.R;
-import jrl.deint.inventoryMVP.pojo.Section;
+import jrl.deint.inventoryMVP.data.db.model.Section;
 import jrl.deint.inventoryMVP.repository.SectionRepository;
 
 /**

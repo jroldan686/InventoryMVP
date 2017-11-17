@@ -1,7 +1,9 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.settings;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+
+import jrl.deint.inventoryMVP.R;
 
 public class GeneralSettingActivity extends PreferenceActivity {
 

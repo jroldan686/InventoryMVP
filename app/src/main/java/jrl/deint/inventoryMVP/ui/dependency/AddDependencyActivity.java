@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.dependency;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
@@ -8,7 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import jrl.deint.inventoryMVP.pojo.Dependency;
+import jrl.deint.inventoryMVP.R;
+import jrl.deint.inventoryMVP.data.db.model.Dependency;
 import jrl.deint.inventoryMVP.repository.DependencyRepository;
 
 public class AddDependencyActivity extends AppCompatActivity {

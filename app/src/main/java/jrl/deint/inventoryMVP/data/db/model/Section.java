@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP.pojo;
+package jrl.deint.inventoryMVP.data.db.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

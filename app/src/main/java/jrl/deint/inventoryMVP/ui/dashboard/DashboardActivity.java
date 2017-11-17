@@ -1,4 +1,4 @@
-package jrl.deint.inventoryMVP;
+package jrl.deint.inventoryMVP.ui.dashboard;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+
+import jrl.deint.inventoryMVP.ui.inventory.InventoryMVPActivity;
+import jrl.deint.inventoryMVP.ui.preferences.PreferencesActivity;
+import jrl.deint.inventoryMVP.ui.product.ProductActivity;
+import jrl.deint.inventoryMVP.R;
+import jrl.deint.inventoryMVP.ui.section.SectionActivity;
+import jrl.deint.inventoryMVP.ui.dependency.DependenciesActivity;
+import jrl.deint.inventoryMVP.ui.settings.AccountSettingActivity;
+import jrl.deint.inventoryMVP.ui.settings.GeneralSettingActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -72,7 +81,7 @@ public class DashboardActivity extends AppCompatActivity {
             Intent intent = null;
             switch (v.getId()) {
                 case R.drawable.inventory2:
-                    intent = new Intent(DashboardActivity.this, InventoryActivity.class);
+                    intent = new Intent(DashboardActivity.this, InventoryMVPActivity.class);
                     break;
                 case R.drawable.products:
                     intent = new Intent(DashboardActivity.this, ProductActivity.class);

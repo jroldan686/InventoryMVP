@@ -6,7 +6,7 @@ import org.mockito.Mock;
 
 import java.util.ArrayList;
 
-import jrl.deint.inventoryMVP.pojo.User;
+import jrl.deint.inventoryMVP.data.db.model.User;
 import jrl.deint.inventoryMVP.repository.UserRepository;
 
 import static org.junit.Assert.*;
